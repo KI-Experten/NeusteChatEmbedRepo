@@ -36,26 +36,56 @@ export const Badge = (props: Props) => {
     if (observer) observer.disconnect();
   });
 
-  return (
-    <span
-      class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
+return (
+  <span
+    style={{
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      textAlign: 'center',
+      padding: '10px',
+      backgroundColor: props.badgeBackgroundColor ?? '#ffffff',
+      display: 'flex',
+      flexDirection: 'row', // Standardmäßig nebeneinander
+      flexWrap: 'wrap', // Erlaubt das Umbruch der Elemente
+      justifyContent: 'center', // Zentriert die Buttons
+    }}
+  >
+    <button
+      onClick={() => window.open('https://fach-ki.tpm-media.de/', '_blank')}
       style={{
+        fontSize: '13px',
+        margin: '5px', // Kleinerer Abstand
+        fontWeight: 'bold',
         color: props.poweredByTextColor ?? defaultTextColor,
-        'background-color': props.badgeBackgroundColor ?? '#ffffff',
+        backgroundColor: '#3B81F6',
+        border: 'none',
+        padding: '10px 20px',
+        cursor: 'pointer',
+        flex: '1 1 auto', // Ermöglicht das Wachsen und Schrumpfen
+        maxWidth: 'calc(50% - 10px)', // Maximale Breite für nebeneinander
       }}
     >
-      Powered by
-      <a
-        ref={liteBadge}
-        href={'https://flowiseai.com'}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="lite-badge"
-        id="lite-badge"
-        style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
-      >
-        <span> Flowise</span>
-      </a>
-    </span>
-  );
+      ➔ Hier zur eigenen Fach-KI!
+    </button>
+    <button
+      onClick={() => window.open('https://fine-tuning.tpm-media.de/', '_blank')}
+      style={{
+        fontSize: '13px',
+        margin: '5px',
+        fontWeight: 'bold',
+        color: props.poweredByTextColor ?? defaultTextColor,
+        backgroundColor: '#3B81F6',
+        border: 'none',
+        padding: '10px 20px',
+        cursor: 'pointer',
+        flex: '1 1 auto',
+        maxWidth: 'calc(50% - 10px)', // Gleich wie oben, für einheitliches Aussehen
+      }}
+    >
+      ➔ Hier zum Fine-Tuning-Modell!
+    </button>
+  </span>
+);
 };
