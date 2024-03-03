@@ -37,28 +37,28 @@ export const Badge = (props: Props) => {
   });
 
   return (
-    <a
-      ref={liteBadge}
-      href={'https://eigene-ki.de'}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="lite-badge"
-      id="lite-badge"
+    <span
+      class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
       style={{
-        display: 'inline-block',
-        backgroundColor: props.badgeBackgroundColor ?? '#3B81F6', // Verwende die übergebene Hintergrundfarbe oder fallback auf Blau
-        color: props.poweredByTextColor ?? '#ffffff', // Verwende die übergebene Textfarbe oder fallback auf Weiß
-        padding: '10px 20px',
-        borderRadius: '20px',
-        textDecoration: 'none',
-        fontWeight: 'bold',
-        fontSize: '14px',
-        boxShadow: '0px 3px 6px rgba(0,0,0,0.16)',
-        textAlign: 'center',
-        cursor: 'pointer',
+        color: props.poweredByTextColor ?? defaultTextColor,
+        backgroundColor: props.badgeBackgroundColor ?? '#ffffff', // Verwende CamelCase für Stilregeln
       }}
     >
-      ➔ Hier zur eigenen KI!
-    </a>
+      <button
+        onClick={() => window.open('https://eigene-ki.de', '_blank')}
+        style={{
+          fontSize: '13px',
+          fontWeight: 'bold',
+          color: 'white', // Weiße Textfarbe für den Button
+          backgroundColor: '#3B81F6', // Blaue Hintergrundfarbe für den Button
+          border: 'none',
+          padding: '10px 20px',
+          cursor: 'pointer',
+          borderRadius: '5px', // Abgerundete Ecken
+        }}
+      >
+        ➔  Hier zur eigenen KI!
+      </button>
+    </span>
   );
 };
