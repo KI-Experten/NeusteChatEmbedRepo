@@ -38,10 +38,14 @@ export const Badge = (props: Props) => {
 
   return (
     <span
-      class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
       style={{
+        display: 'block', // Stellt sicher, dass das Span-Element sich wie ein Block-Element verhält
+        textAlign: 'center',
+        padding: '10px',
+        margin: 'auto',
+        width: '100%',
         color: props.poweredByTextColor ?? defaultTextColor,
-        backgroundColor: props.badgeBackgroundColor ?? '#ffffff', // Verwende CamelCase für Stilregeln
+        backgroundColor: props.badgeBackgroundColor ?? '#ffffff',
       }}
     >
       <button
@@ -49,15 +53,15 @@ export const Badge = (props: Props) => {
         style={{
           fontSize: '13px',
           fontWeight: 'bold',
-          color: 'white', // Weiße Textfarbe für den Button
-          backgroundColor: '#3B81F6', // Blaue Hintergrundfarbe für den Button
+          color: 'white',
+          backgroundColor: '#3B81F6',
           border: 'none',
           padding: '10px 20px',
           cursor: 'pointer',
-          borderRadius: '5px', // Abgerundete Ecken
+          borderRadius: '5px',
         }}
       >
-        ➔  Hier zur eigenen KI!
+        ➔ Hier zur eigenen KI!
       </button>
     </span>
   );
