@@ -40,25 +40,25 @@ export const Badge = (props: Props) => {
     <span
       style={{
         display: 'block', // Stellt sicher, dass das Span-Element sich wie ein Block-Element verhält
-        textAlign: 'center',
+        'text-align': 'center',
         padding: '10px',
         margin: 'auto',
         width: '100%',
         color: props.poweredByTextColor ?? defaultTextColor,
-        backgroundColor: props.badgeBackgroundColor ?? '#ffffff',
+        'background-color': props.badgeBackgroundColor ?? '#ffffff',
       }}
     >
       <button
         onClick={() => window.open('https://eigene-ki.de', '_blank')}
         style={{
-          fontSize: '13px',
-          fontWeight: 'bold',
+          'font-size': '13px',
+          'font-weight': 'bold',
           color: 'white',
-          backgroundColor: '#3B81F6',
+          'background-color': '#3B81F6',
           border: 'none',
           padding: '10px 20px',
           cursor: 'pointer',
-          borderRadius: '5px',
+          'border-radius': '5px',
         }}
       >
         ➔ Hier zur eigenen KI!
