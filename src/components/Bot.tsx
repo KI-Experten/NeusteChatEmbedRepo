@@ -965,24 +965,24 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-            <button
-            onClick={() => window.open('https://eigene-ki.de', '_blank')}
-            style={{
-              'font-size': '13px',
-              'font-weight': 'bold',
-              color: 'white',
-              'background-color': '#3B81F6',
-              border: 'none',
-              padding: '10px 20px',
-              cursor: 'pointer',
-              'border-radius': '5px',
-              'box-shadow': '5px 5px 25px 5px  rgb(59, 129, 246)',
-              'align-self': 'center',
-              width: '15%'
-            }}
-          >
-            ➔ HIER zur eigenen KI!
-          </button>
+<button
+  onClick={() => window.open('https://eigene-ki.de', '_blank')}
+  style={{
+    fontSize: 'calc(8px + 1vw)', // Passt sich an die Viewport-Breite an, mindestens jedoch 8px
+    fontWeight: 'bold',
+    color: 'white',
+    backgroundColor: '#3B81F6',
+    border: 'none',
+    padding: 'calc(5px + 1vw) calc(10px + 1vw)', // Passt sich an die Viewport-Breite an
+    cursor: 'pointer',
+    borderRadius: '5px',
+    boxShadow: '5px 5px 25px 5px rgb(59, 129, 246)',
+    alignSelf: 'center',
+    width: '15%'
+  }}
+>
+  ➔ HIER zur eigenen KI!
+</button>  
         </div>
       </div>
       {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)} />}
