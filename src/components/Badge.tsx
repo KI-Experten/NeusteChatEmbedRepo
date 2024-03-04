@@ -36,7 +36,7 @@ export const Badge = (props: Props) => {
     if (observer) observer.disconnect();
   });
 
-   return (
+  return (
     <span
       class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
       style={{
