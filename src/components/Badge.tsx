@@ -36,33 +36,26 @@ export const Badge = (props: Props) => {
     if (observer) observer.disconnect();
   });
 
-  return (
+   return (
     <span
+      class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
       style={{
-        display: 'block', // Stellt sicher, dass das Span-Element sich wie ein Block-Element verhält
-        'text-align': 'center',
-        padding: '10px',
-        margin: 'auto',
-        width: '100%',
         color: props.poweredByTextColor ?? defaultTextColor,
         'background-color': props.badgeBackgroundColor ?? '#ffffff',
       }}
     >
-      <button
-        onClick={() => window.open('https://eigene-ki.de', '_blank')}
-        style={{
-          'font-size': '13px',
-          'font-weight': 'bold',
-          color: 'white',
-          'background-color': '#3B81F6',
-          border: 'none',
-          padding: '10px 20px',
-          cursor: 'pointer',
-          'border-radius': '5px',
-        }}
+      Powered by
+      <a
+        ref={liteBadge}
+        href={'https://flowiseai.com'}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="lite-badge"
+        id="lite-badge"
+        style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        ➔ Hier zur eigenen KI!
-      </button>
+        <span> Flowise</span>
+      </a>
     </span>
   );
 };

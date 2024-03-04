@@ -965,7 +965,23 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-          <Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} botContainer={botContainer} />
+         *<Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} botContainer={botContainer} />
+      <button
+        onClick={() => window.open('https://eigene-ki.de', '_blank')}
+        style={{
+          'font-size': '13px',
+          'font-weight': 'bold',
+          color: 'white',
+          'background-color': '#3B81F6',
+          border: 'none',
+          padding: '10px 20px',
+          cursor: 'pointer',
+          'border-radius': '5px',
+          boxShadow: '0px 3px 6px rgba(0,0,0,0.16)'
+        }}
+      >
+        ➔ Hier zur eigenen KI!
+      </button>
         </div>
       </div>
       {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)} />}
