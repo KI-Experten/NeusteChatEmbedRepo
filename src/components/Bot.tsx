@@ -965,24 +965,22 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-<button
-  onClick={() => window.open('https://eigene-ki.de', '_blank')}
+          <button
+  onClick={() => window.open('https://eigene-firmen-ki.de', '_blank')}
   style={{
-    fontSize: 'calc(8px + 1vmin)', // Besser skalierbar zwischen Mobilgeräten und Desktop
+    fontSize: '2vw', // Anpassung der Schriftgröße an die Viewport-Breite
     fontWeight: 'bold',
     color: 'white',
     backgroundColor: '#3B81F6',
     border: 'none',
-    padding: '10px 20px', // Feste Padding-Werte für eine konsistentere Darstellung
+    padding: '2vw', // Anpassung des Paddings an die Viewport-Breite
     cursor: 'pointer',
     borderRadius: '5px',
-    boxShadow: '0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)', // Weicheres Schatten-Design
-    display: 'inline-flex', // Ermöglicht eine bessere Zentrierung des Texts im Button
-    justifyContent: 'center',
-    alignItems: 'center',
-    maxWidth: '100%', // Stellt sicher, dass der Button nicht über den Container hinausgeht
-    width: 'auto', // Auto-Breite basierend auf dem Inhalt für bessere Responsivität
-    margin: '10px 0', // Fügt einen oberen und unteren Rand hinzu, um Platz zu schaffen
+    boxShadow: '5px 5px 25px 5px rgb(59, 129, 246)',
+    alignSelf: 'center',
+    width: '60%', // Breitere Breiteneinstellung für bessere Anpassung
+    maxWidth: '250px', // Maximalbreite, um Übergrößen auf großen Bildschirmen zu vermeiden
+    minHeight: '40px', // Mindesthöhe, um sicherzustellen, dass der Button nicht zu dünn wird
   }}
 >
   ➔ HIER zur eigenen KI!
