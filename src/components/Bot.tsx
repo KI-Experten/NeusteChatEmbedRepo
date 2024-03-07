@@ -964,20 +964,20 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 handleFileChange={handleFileChange}
               />
             )}
-          </div>
-           <button
+          </div>                    
+          <button
             onClick={() => window.open('https://eigene-firmen-ki.de', '_blank')}
             style={{
-              fontWeight: 'bold',
-              fontSize: '2vw',
+              'font-size': '2vw',
+              'font-weight': 'bold',
               color: 'white',
-              backgroundColor: '#3B81F6',
+              'background-color': '#3B81F6',
               border: 'none',
               padding: '2vw',
               cursor: 'pointer',
-              borderRadius: '5px',
-              boxShadow: '5px 5px 25px 5px  rgb(59, 129, 246)',
-              alignSelf: 'center',
+              'border-radius': '5px',
+              'box-shadow': '5px 5px 25px 5px  rgb(59, 129, 246)',
+              'align-self': 'center',
               width: 'auto'
             }}
           >
