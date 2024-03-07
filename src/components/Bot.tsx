@@ -965,22 +965,20 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-          <button
+           <button
             onClick={() => window.open('https://eigene-firmen-ki.de', '_blank')}
             style={{
-              'font-size': '2vw', // Anpassung der Schriftgröße an die Viewport-Breite
-              'font-weight': 'bold',
+              fontWeight: 'bold',
+              fontSize: '2vw',
               color: 'white',
-              'background-color': '#3B81F6',
+              backgroundColor: '#3B81F6',
               border: 'none',
-              padding: '2vw', // Anpassung des Paddings an die Viewport-Breite
+              padding: '2vw',
               cursor: 'pointer',
-              'border-radius': '5px',
-              'box-shadow': '5px 5px 25px 5px rgb(59, 129, 246)',
-              'align-self': 'center',
-              width: '60%', // Breitere Breiteneinstellung für bessere Anpassung
-              'max-width': '250px', // Maximalbreite, um Übergrößen auf großen Bildschirmen zu vermeiden
-              'min-height': '40px', // Mindesthöhe, um sicherzustellen, dass der Button nicht zu dünn wird
+              borderRadius: '5px',
+              boxShadow: '5px 5px 25px 5px  rgb(59, 129, 246)',
+              alignSelf: 'center',
+              width: 'auto'
             }}
           >
             ➔ HIER zur eigenen KI!
