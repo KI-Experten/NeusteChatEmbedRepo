@@ -964,21 +964,21 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 handleFileChange={handleFileChange}
               />
             )}
-          </div>                    
+          </div>
           <button
             onClick={() => window.open('https://eigene-firmen-ki.de', '_blank')}
             style={{
-              'font-size': '2vw',
+              'font-size': '1vw',
               'font-weight': 'bold',
               color: 'white',
               'background-color': '#3B81F6',
               border: 'none',
-              padding: '2vw',
+              padding: '0.5vw',
               cursor: 'pointer',
-              'border-radius': '5px',
+              'border-radius': '10px',
               'box-shadow': '5px 5px 25px 5px  rgb(59, 129, 246)',
               'align-self': 'center',
-              width: 'auto'
+              width: 'auto',
             }}
           >
             ➔ HIER zur eigenen KI!
