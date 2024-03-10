@@ -965,12 +965,9 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-          <button
-    class="werbebutton"
-    onClick={() => window.open('https://eigene-firmen-ki.de', '_blank')}
-  >
-    ➔ HIER zur eigenen KI!
-  </button>
+          <button class="werbebutton" onClick={() => window.open('https://eigene-Unternehmens-ki.de', '_blank')}>
+            ➔ HIER zur eigenen KI!
+          </button>
         </div>
       </div>
       {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)} />}

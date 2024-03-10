@@ -450,7 +450,7 @@ input {
 }
 
 /* Media Query für kleinere Bildschirme */
-@media (max-width: 25vw) {
+@media (max-width: 768px) {
   .werbebutton {
     font-size: 2vw; /* Größere Schriftgröße auf Mobilgeräten */
     padding: 1vw; /* Größeres Padding auf Mobilgeräten */
